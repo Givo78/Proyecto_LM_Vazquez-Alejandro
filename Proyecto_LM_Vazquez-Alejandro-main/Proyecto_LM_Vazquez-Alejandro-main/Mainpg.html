@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Mainpg.css">
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><div class="dropdown">
+                <a href="#"class="dropbtn">Personalizer</a>
+                <div class="dropdown-content">
+                    <p><b>Bg_color</b></p>
+                 <div class= "Line">
+                    <button id="rosa" onclick="cambiarFonRosa()"></button>
+                    <button id="verde" onclick="cambiarFonVerde()"></button>
+                    <button id="azul" onclick="cambiarFonAzul()"></button>
+                    <button id="marron" onclick="cambiarFonMarron()"></button>
+                    <button id="gris" onclick="cambiarFonGris()"></button>
+                </div>
+                    <p><b>Change letters</b></p>
+                <div class= "Line">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+                <div class= "Line">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+                <div class= "Line">
+                    <button>A</button>
+                    <button>T</button>
+                    <button>C</button>
+                    <button>F</button>
+                    <button>M</button>
+                </div>
+              </div></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="images.html">Images</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div id="texto">
+        <h1>Welcome to Personalizer</h1>
+        <p>This is a paragraph that you can adapt content.</p>
+        <p>Click to Personalizer banner.</p>
+    </div>
+
+    <script>
+        document.getElementById('dropbtn').addEventListener('click', () => {document.getElementById('dropdown-content').style.display= 'block';})
+
+        function cambiarFonRosa (){
+            document.body.style.backgroundColor = "pink";
+        }
+
+        function cambiarFonVerde (){
+            document.body.style.backgroundColor = "green";
+        }
+
+        function cambiarFonAzul (){
+            document.body.style.backgroundColor = "lightblue";
+        }
+
+        function cambiarFonMarron (){
+            document.body.style.backgroundColor = "orange";
+        }
+
+        function cambiarFonGris (){
+            document.body.style.backgroundColor = "gray";
+        }
+    </script>
+</body>
+</html>
