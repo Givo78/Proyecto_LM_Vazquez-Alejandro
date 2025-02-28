@@ -14,33 +14,33 @@
                 <div class="dropdown-content">
                     <p><b>Bg_color</b></p>
                  <div class= "Line">
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                    <button id="rosa" onclick="cambiarFonRosa()"></button>
+                    <button id="verde" onclick="cambiarFonVerde()"></button>
+                    <button id="azul" onclick="cambiarFonAzul()"></button>
+                    <button id="marron" onclick="cambiarFonMarron()"></button>
+                    <button id="gris" onclick="cambiarFonGris()"></button>
                 </div>
                     <p><b>Change letters</b></p>
                 <div class= "Line">
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                    <button id="LetRojo" onclick="cambiaLetRojo()"></button>
+                    <button id="LetVerde" onclick="cambiaLetVerde()"></button>
+                    <button id="LetAzul" onclick="cambiaLetAzul()"></button>
+                    <button id="LetNegro" onclick="cambiaLetNegro()"></button>
+                    <button id="LetBlanco" onclick="cambiaLetBlanco()"></button>
                 </div>
                 <div class= "Line">
-                    <button>XS</button>
-                    <button>S</button>
-                    <button>M</button>
-                    <button>L</button>
-                    <button>XL</button>
+                    <button onclick="tamXS()">XS</button>
+                    <button onclick="tamS()">S</button>
+                    <button onclick="tamM()">M</button>
+                    <button onclick="tamL()">L</button>
+                    <button onclick="tamXL()">XL</button>
                 </div>
                 <div class= "Line">
-                    <button>A</button>
-                    <button>T</button>
-                    <button>C</button>
-                    <button>F</button>
-                    <button>M</button>
+                    <button id="Arial" onclick="arial()">A</button>
+                    <button id="Times" onclick="times()">T</button>
+                    <button id="Calibri" onclick="calibri()">C</button>
+                    <button id="Papyrus" onclick="papyrus()">F</button>
+                    <button id="">M</button>
                 </div>
               </div></li>
             <li><a href="form.html">Form</a></li>
@@ -49,8 +49,93 @@
     </nav>
 </header>
 <body>
-    <h1>Welcome to Personalizer</h1>
-    <p>This is a paragraph that you can adapt content.</p>
-    <p>Click to Personalizer banner.</p>
+    <div id="texto">
+        <h1>Welcome to Personalizer</h1>
+        <p>This is a paragraph that you can adapt content.</p>
+        <p>Click to Personalizer banner.</p>
+    </div>
+
+    <script>
+        document.getElementById('dropbtn').addEventListener('click', () => {document.getElementById('dropdown-content').style.display= 'block';})
+
+        function cambiarFonRosa (){
+            document.body.style.backgroundColor = "pink";
+        }
+
+        function cambiarFonVerde (){
+            document.body.style.backgroundColor = "green";
+        }
+
+        function cambiarFonAzul (){
+            document.body.style.backgroundColor = "lightblue";
+        }
+
+        function cambiarFonMarron (){
+            document.body.style.backgroundColor = "orange";
+        }
+
+        function cambiarFonGris (){
+            document.body.style.backgroundColor = "gray";
+        }
+
+
+        function cambiaLetRojo(){
+            document.getElementById("texto").style.color = "red";
+        }
+
+        function cambiaLetVerde(){
+            document.getElementById("texto").style.color = "green";
+        }
+
+        function cambiaLetAzul(){
+            document.getElementById("texto").style.color = "blue";
+        }
+
+        function cambiaLetNegro(){
+            document.getElementById("texto").style.color = "black";
+        }
+
+        function cambiaLetBlanco(){
+            document.getElementById("texto").style.color = "white";
+        }
+
+
+        function tamXL(){
+            document.getElementById("texto").style.fontSize = "x-large";
+        }
+
+        function tamL(){
+            document.getElementById("texto").style.fontSize = "large";
+        }
+
+        function tamM(){
+            document.getElementById("texto").style.fontSize = "medium";
+        }
+
+        function tamS(){
+            document.getElementById("texto").style.fontSize = "small";
+        }
+
+        function tamXS(){
+            document.getElementById("texto").style.fontSize = "x-small";
+        }
+
+
+        function arial() {
+            document.getElementById("texto").style.fontFamily = "Arial";
+        }
+
+        function calibri() {
+            document.getElementById("texto").style.fontFamily = "Calibri";
+        }
+
+        function papyrus() {
+            document.getElementById("texto").style.fontFamily = "Papyrus";
+        }
+
+        function times() {
+            document.getElementById("texto").style.fontFamily = "Times new roman";
+        }
+    </script>
 </body>
 </html>
