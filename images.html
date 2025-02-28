@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head class="header">
+    <title>Menú Personalización</title>
+    <link rel="stylesheet" href="Images.css">
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="Mainpg.html">Personalizer</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="images.html">Images</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="zona1">
+        <h1>Magic Button:</h1>
+        <div class="button-container">
+            <button id="cambiarImagen">Change Image!</button>
+        </div>
+        <br><br>
+        <img id="imagenDinamica" src="Images/1.jpg" alt="Dynamic Image">
+    </div>
+
+    <div class="zona2">
+        <h1>AutoLoading</h1>
+        <img id="imagenAuto" src="img/css.png" alt="Auto Image">
+    </div>
+    
+    <script src="modificarCosas.js"></script>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    let btnCambiarImagen = document.getElementById("cambiarImagen");
+    let imgDinamica = document.getElementById("imagenDinamica");
+    let imgAuto = document.getElementById("imagenAuto");
+
+    if (btnCambiarImagen && imgDinamica) {
+        let imagenes = ["Images/1.jpg", "Images/2.jpg", "Images/3.jpg", "Images/4.jpg", "Images/5.jpg"];
+        let indice = 0;
+
+        btnCambiarImagen.addEventListener("click", function () {
+            indice = (indice + 1) % imagenes.length;
+            imgDinamica.src = imagenes[indice];
+        });
+
+        if (imgAuto) {
+            setInterval(() => {
+                indice = (indice + 1) % imagenes.length;
+                imgAuto.src = imagenes[indice];
+            }, 1000);
+        }
+    }
+});
+
+    </script>
+</body>
+</html>
